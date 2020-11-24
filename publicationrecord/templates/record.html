@@ -1,0 +1,14 @@
+<h1>Online Publication Records</h1>
+
+<form action="/addRecordItem/" method = "post">{% csrf_token %}
+    <input type="text" name="content">
+    <input type="submit" value="Add Record Item">
+</form>
+
+
+<ul>
+    {% for i in all_items %}
+    <li>{{i.content}}
+    </li>
+    {% endfor %}
+</ul>
